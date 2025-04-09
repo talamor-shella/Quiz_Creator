@@ -12,11 +12,11 @@ def quiz_creator():
     while True:     
         
         #make a category to properly organize questions
-        category = input("Enter a category for making a question (Math, English, Science, and History)").lower()
+        category = input("Enter a category for making a question (Math, English, Science, and History): ").lower()
 
         #create a text file for each category        
         filename = category + ".txt"
-        
+
         #ask user input for a question
         question = input("Enter a question: ")
 
@@ -29,15 +29,26 @@ def quiz_creator():
         #ask the correct answer
         correct_answer = input("Enter the correct answer (a/b/c/d): ")
 
-        #creates a text file, appends all the questions and answers
-        with open ("quizcreator.txt", "a") as file:
+        #to double check if the question and inputs are correct
+        print(f"Question: {question}")
+        print(f"a) {a}")
+        print(f"b) {b}")
+        print(f"c) {c}")
+        print(f"d) {d}")
 
-            file.write(f"\nQuestion: {question}\n")
-            file.write(f"a) {a}\n")
-            file.write(f"b) {b}\n")
-            file.write(f"c) {c}\n")
-            file.write(f"d) {d}\n")
-            file.write(f"The correct answer is: {correct_answer}\n")
+        confirm = input("Is the question and answer correct before adding to file? type yes or no: ").lower()
+        #if statement for confirming
+        if confirm == "yes":
+
+            #creates a text file for each category, appends all the questions and answers
+            with open (filename, "a") as file:
+
+                file.write(f"\nQuestion: {question}\n")
+                file.write(f"a) {a}\n")
+                file.write(f"b) {b}\n")
+                file.write(f"c) {c}\n")
+                file.write(f"d) {d}\n")
+                file.write(f"The correct answer is: {correct_answer}\n")
 
         #ask user if want to add more question
         add_question = input("Do you want to add more question? (yes or no): ").lower()
