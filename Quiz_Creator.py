@@ -7,9 +7,16 @@ Write the collected data to a text file. Ask another question until the user cho
 """
 
 def quiz_creator():
+    
     #While loop until invalid
     while True:     
+        
+        #make a category to properly organize questions
+        category = input("Enter a category for making a question (Math, English, Science, and History)").lower()
 
+        #create a text file for each category        
+        filename = category + ".txt"
+        
         #ask user input for a question
         question = input("Enter a question: ")
 
