@@ -6,7 +6,19 @@ Write the collected data to a text file. Ask another question until the user cho
 
 """
 
+print("Quiz Checker")
+
 #While loop until invalid
-#ask user input for a question
-#ask for 4 possible answers 
-#ask the correct answer
+while True: 
+
+    #ask user input for a question
+    question = input("Enter a question: ")
+
+    #ask for 4 possible answers   
+    a = input("option a: ")
+    b = input("option b: ")
+    c = input("option c: ")
+    d = input("option d: ")
+    
+    #ask the correct answer
+    correct_answer = input("enter the correct answer: ")
