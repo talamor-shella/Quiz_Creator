@@ -6,8 +6,6 @@ Write the collected data to a text file. Ask another question until the user cho
 
 """
 
-
-
 #While loop until invalid
 while True:     
 
@@ -24,10 +22,16 @@ while True:
     correct_answer = input("Enter the correct answer (a/b/c/d): ")
 
     #arranged question and answers
-    print(f"Question: {question}")
+    print(f"\nQuestion: {question}")
     print(f"a) {a}")
     print(f"b) {b}")
     print(f"c) {c}")
     print(f"d) {d}")
-    print(f"The correct answer is: {correct_answer}")
+    print(f"The correct answer is: {correct_answer}\n")
 
+    #ask user if want to add more question
+    add_question = input("Do you want to add more question? (yes or no): ").lower()
+
+    #if statement to check if yes or no
+    if add_question != "yes":
+        break
