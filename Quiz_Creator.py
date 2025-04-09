@@ -25,7 +25,7 @@ def quiz_creator():
         #creates a text file, appends all the questions and answers
         with open ("quizcreator.txt", "a") as file:
 
-            file.write(f"\nQuestion: {question}")
+            file.write(f"\nQuestion: {question}\n")
             file.write(f"a) {a}\n")
             file.write(f"b) {b}\n")
             file.write(f"c) {c}\n")
