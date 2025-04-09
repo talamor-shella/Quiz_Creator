@@ -8,6 +8,9 @@ Write the collected data to a text file. Ask another question until the user cho
 
 def quiz_creator():
     
+    print("Welcome to Quiz Creator!")
+    print("You can select any category for making a quiz.")
+
     #While loop until invalid
     while True:     
         
@@ -55,5 +58,6 @@ def quiz_creator():
 
         #if statement to check if yes or no
         if add_question != "yes":
+            print("Exits Quiz Creator!")
             break
 quiz_creator()
