@@ -69,3 +69,7 @@ while questions:
     
     #Ask user if they want to continue
     continue_quiz = input("You want to continue? (yes/no): ").lower()
+
+    #checks if the user wants to continue 
+    if continue_quiz != "yes":
+        break
