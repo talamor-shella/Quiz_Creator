@@ -23,16 +23,16 @@ with open(filename_category, "r") as file:
 questions = []
 
 #for looping through question, choices, and answer from file
-for i in range(0, len(lines), 6):
+for i in range(0, len(lines), 7):
 
     #try-except to avoid error in index
     try:
-        question = lines[i].strip()
-        choices_a = lines[i+1].strip()
-        choices_b = lines[i+2].strip()
-        choices_c = lines[i+3].strip()
-        choices_d = lines[i+4].strip()
-        answer = lines[i+5].strip()
+        question = lines[i+1].strip()
+        choices_a = lines[i+2].strip()
+        choices_b = lines[i+3].strip()
+        choices_c = lines[i+4].strip()
+        choices_d = lines[i+5].strip()
+        answer = lines[i+6].strip().replace("The correct answer is: ","")
 
         #append the questions, choices and answers
         questions.append({
@@ -57,3 +57,12 @@ while questions:
 
     #ask user their answer
     user_answer = input("Enter your answer (a/b/c/d): ").lower()
+
+    #checks if the answer is correct 
+    if user_answer == current_question["answer"]:
+        print("Correct!\n")
+    else:
+        print(f"Wrong! The correct answer is {current_question['answer']}\n")
+
+
+    
