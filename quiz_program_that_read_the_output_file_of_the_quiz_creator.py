@@ -19,7 +19,10 @@ filename_category = quiz_category + ".txt"
 with open(filename_category, "r") as file:
     lines = file.readlines()
 
-#for looping through question and answer from file
+#empty list to store questions, choices, and answer
+questions = []
+
+#for looping through question, choices, and answer from file
 for i in range(0, len(lines), 6):
     question = lines[i].strip()
     choices_a = lines[i+1].strip()
@@ -27,5 +30,12 @@ for i in range(0, len(lines), 6):
     choices_c = lines[i+3].strip()
     choices_d = lines[i+4].strip()
     answer = lines[i+5].strip()
-    
+
+    #append the questions, choices and answers
+    questions.append({
+        "question": question, "choices": {"a": choices_a, "b": choices_b, "c": choices_c, "d": choices_d},
+        "answer": answer
+    })
+
+print(questions)
 #while loop for starting a quiz
