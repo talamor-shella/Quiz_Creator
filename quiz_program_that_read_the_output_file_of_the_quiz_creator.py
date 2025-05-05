@@ -16,5 +16,8 @@ quiz_category = input("Enter the category of quiz you want (Math, English, Scien
 filename_category = quiz_category + ".txt"
 
 #open the category file 
+with open(filename_category, "r") as file:
+    lines = file.readlines()
+
 #for looping through question and answer from file
 #while loop for starting a quiz
