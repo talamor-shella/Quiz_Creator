@@ -6,3 +6,9 @@ check if the answer is correct.
 
 """
 
+#import random
+#ask user input the category of the quiz
+#concentenate the category and ".txt"
+#open the category file 
+#for looping through question and answer from file
+#while loop for starting a quiz
