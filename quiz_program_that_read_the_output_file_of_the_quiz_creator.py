@@ -13,6 +13,8 @@ import random
 quiz_category = input("Enter the category of quiz you want (Math, English, Science, History): ").lower()
 
 #concentenate the category and ".txt"
+filename_category = quiz_category + ".txt"
+
 #open the category file 
 #for looping through question and answer from file
 #while loop for starting a quiz
