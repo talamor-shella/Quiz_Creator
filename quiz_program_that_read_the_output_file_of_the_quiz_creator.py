@@ -42,6 +42,12 @@ for i in range(0, len(lines), 7):
     except IndexError:
         continue    
 
+#counts the number of corrects
+correct_answers_count = 0
+
+#counts the number of mistakes
+mistake_answers_count = 0
+
 #while loop for starting a quiz
 while questions:
 
@@ -61,9 +67,10 @@ while questions:
     #checks if the answer is correct 
     if user_answer == current_question["answer"]:
         print("Correct!\n")
+        correct_answers_count += 1
     else:
         print(f"Wrong! The correct answer is {current_question['answer']}\n")
-
+        mistake_answers_count += 1
     #to avoid repeating questions
     questions.remove(current_question)
     
@@ -73,3 +80,5 @@ while questions:
     #checks if the user wants to continue 
     if continue_quiz != "yes":
         break
+
+print(f"Quiz Completed! Out of {len(lines)//7}, you got {correct_answers_count} correct answers and {mistake_answers_count} mistakes. ")
