@@ -51,5 +51,7 @@ while questions:
     #Display the current question
     print(current_question["question"])
 
-    
+    #loop through each choices and print
+    for key, val in current_question["choices"].items():
+        print(val)
 
