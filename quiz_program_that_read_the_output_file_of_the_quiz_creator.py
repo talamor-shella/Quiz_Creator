@@ -55,3 +55,5 @@ while questions:
     for key, val in current_question["choices"].items():
         print(val)
 
+    #ask user their answer
+    user_answer = input("Enter your answer (a/b/c/d): ").lower()
