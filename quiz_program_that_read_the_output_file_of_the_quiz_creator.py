@@ -47,5 +47,9 @@ while questions:
 
     #randomly selecting a questions from the list
     current_question = random.choice(questions)
+
+    #Display the current question
+    print(current_question["question"])
+
     
 
