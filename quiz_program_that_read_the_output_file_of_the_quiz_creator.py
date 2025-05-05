@@ -7,7 +7,11 @@ check if the answer is correct.
 """
 
 #import random
+import random
+
 #ask user input the category of the quiz
+quiz_category = input("Enter the category of quiz you want (Math, English, Science, History): ").lower()
+
 #concentenate the category and ".txt"
 #open the category file 
 #for looping through question and answer from file
