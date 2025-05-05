@@ -24,20 +24,20 @@ def quiz_creator():
         question = input("Enter a question: ")
 
         #ask for 4 possible answers   
-        a = input("Option a: ")
-        b = input("Option b: ")
-        c = input("Option c: ")
-        d = input("Option d: ")
+        choices_a = input("Option a: ")
+        choices_b = input("Option b: ")
+        choices_c = input("Option c: ")
+        choices_d = input("Option d: ")
     
         #ask the correct answer
         correct_answer = input("Enter the correct answer (a/b/c/d): ")
 
         #to double check if the question and inputs are correct
         print(f"Question: {question}")
-        print(f"a) {a}")
-        print(f"b) {b}")
-        print(f"c) {c}")
-        print(f"d) {d}")
+        print(f"a) {choices_a}")
+        print(f"b) {choices_b}")
+        print(f"c) {choices_c}")
+        print(f"d) {choices_d}")
 
         confirm = input("Is the question and answer correct before adding to file? type yes or no: ").lower()
         #if statement for confirming
@@ -47,10 +47,10 @@ def quiz_creator():
             with open (filename, "a") as file:
 
                 file.write(f"\nQuestion: {question}\n")
-                file.write(f"a) {a}\n")
-                file.write(f"b) {b}\n")
-                file.write(f"c) {c}\n")
-                file.write(f"d) {d}\n")
+                file.write(f"a) {choices_a}\n")
+                file.write(f"b) {choices_b}\n")
+                file.write(f"c) {choices_c}\n")
+                file.write(f"d) {choices_d}\n")
                 file.write(f"The correct answer is: {correct_answer}\n")
 
         #ask user if want to add more question
