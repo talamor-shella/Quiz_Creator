@@ -24,18 +24,23 @@ questions = []
 
 #for looping through question, choices, and answer from file
 for i in range(0, len(lines), 6):
-    question = lines[i].strip()
-    choices_a = lines[i+1].strip()
-    choices_b = lines[i+2].strip()
-    choices_c = lines[i+3].strip()
-    choices_d = lines[i+4].strip()
-    answer = lines[i+5].strip()
 
-    #append the questions, choices and answers
-    questions.append({
-        "question": question, "choices": {"a": choices_a, "b": choices_b, "c": choices_c, "d": choices_d},
-        "answer": answer
-    })
+    #try-except to avoid error in index
+    try:
+        question = lines[i].strip()
+        choices_a = lines[i+1].strip()
+        choices_b = lines[i+2].strip()
+        choices_c = lines[i+3].strip()
+        choices_d = lines[i+4].strip()
+        answer = lines[i+5].strip()
 
-print(questions)
+        #append the questions, choices and answers
+        questions.append({
+            "question": question, "choices": {"a": choices_a, "b": choices_b, "c": choices_c, "d": choices_d},
+            "answer": answer
+        })
+    except IndexError:
+        continue    
+
+    print(questions)    
 #while loop for starting a quiz
