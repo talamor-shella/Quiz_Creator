@@ -67,3 +67,5 @@ while questions:
     #to avoid repeating questions
     questions.remove(current_question)
     
+    #Ask user if they want to continue
+    continue_quiz = input("You want to continue? (yes/no): ").lower()
