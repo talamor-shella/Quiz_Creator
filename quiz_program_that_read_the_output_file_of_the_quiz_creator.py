@@ -64,5 +64,6 @@ while questions:
     else:
         print(f"Wrong! The correct answer is {current_question['answer']}\n")
 
-
+    #to avoid repeating questions
+    questions.remove(current_question)
     
