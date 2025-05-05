@@ -42,5 +42,10 @@ for i in range(0, len(lines), 6):
     except IndexError:
         continue    
 
-    print(questions)    
 #while loop for starting a quiz
+while questions:
+
+    #randomly selecting a questions from the list
+    current_question = random.choice(questions)
+    
+
